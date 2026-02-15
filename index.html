@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>One-Button Arena</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="ui">
+    <h1>One-Button Arena</h1>
+
+    <div class="topbar">
+      <div id="hud">
+        <div class="hp">Player HP: <strong><span id="player-hp">--</span></strong></div>
+        <div class="enemy">Enemy: <strong><span id="enemy-name">--</span></strong> HP: <strong><span id="enemy-hp">--</span></strong></div>
+      </div>
+      <div class="badges">
+        <div id="score-badge">Score<br><span id="score">0</span></div>
+        <div id="highscore-badge">High Score<br><span id="highscore">0</span></div>
+      </div>
+    </div>
+
+    <p id="instructions">Controls: press <strong>Space</strong> to reverse direction. You move automatically along the line. Player auto-fires straight up.</p>
+    <p id="objective">Objective: dodge enemy projectiles and land hits to defeat increasingly difficult enemies.</p>
+  </div>
+  <div id="gameWrap">
+    <canvas id="game" width="800" height="400"></canvas>
+    <div id="startOverlay">
+      <div class="startCard">
+        <h2>Ready?</h2>
+        <p>Press <strong>Space</strong> to start. After starting, press <strong>Space</strong> to reverse direction while you move along the line. Player auto-fires straight up.</p>
+        <p class="hint">Press Space to start</p>
+      </div>
+    </div>
+      <div id="deathOverlay" style="display:none">
+        <div class="startCard">
+          <h2>Game Over</h2>
+          <p id="deathText">You died.</p>
+          <p class="hint">Press <strong>Space</strong> or click Restart to play again.</p>
+          <div style="margin-top:10px"><button id="restartBtn">Restart</button></div>
+        </div>
+      </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
